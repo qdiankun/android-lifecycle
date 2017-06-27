@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.LoaderManager;
 import android.view.Menu;
 
@@ -27,6 +28,11 @@ public class MainFragmentActivity extends FragmentActivity {
 
         FragmentManager.enableDebugLogging(true);
         LoaderManager.enableDebugLogging(true);
+
+        TestCompatFragment testCompatFragment = new TestCompatFragment();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.add(R.id.container, testCompatFragment);
+        fragmentTransaction.commit();
     }
 
     @Override

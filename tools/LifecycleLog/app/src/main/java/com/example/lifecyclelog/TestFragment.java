@@ -25,6 +25,13 @@ public class TestFragment extends Fragment {
     }
 
     @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        recLifeCycle(getClass(), CALL_TO_SUPER);
+        super.setUserVisibleHint(isVisibleToUser);
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
+    }
+
+    @Override
     public View
     onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 

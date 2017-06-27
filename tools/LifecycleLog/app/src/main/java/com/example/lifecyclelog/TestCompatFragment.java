@@ -22,6 +22,20 @@ public class TestCompatFragment extends Fragment {
     }
 
     @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        recLifeCycle(getClass(), CALL_TO_SUPER);
+        super.setUserVisibleHint(isVisibleToUser);
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
+    }
+
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+        recLifeCycle(getClass(), CALL_TO_SUPER);
+        super.onHiddenChanged(hidden);
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
+    }
+
+    @Override
     public View
     onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 

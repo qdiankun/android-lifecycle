@@ -8,9 +8,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <fragment android:id="@+id/test_fragment"
+<!--    <fragment android:id="@+id/test_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        class="com.example.lifecyclelog.TestCompatFragment" />
+        class="com.example.lifecyclelog.TestCompatFragment" />-->
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
 
 </RelativeLayout>
